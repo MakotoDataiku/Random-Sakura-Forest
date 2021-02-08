@@ -45,6 +45,17 @@
         "appliesTo": "COLUMNS"
       },
       "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "if(date\u003d\u003d\u00272020/4/20\u0027, \u0027bloom\u0027, \u0027\u0027)",
+        "column": "flower_status"
+      },
+      "alwaysShowComment": false
     }
   ],
   "maxProcessedMemTableBytes": -1,
@@ -56,6 +67,7 @@
   "analysisColumnData": {},
   "columnWidthsByName": {
     "date": 100,
+    "flower_status": 113,
     "temperature": 100,
     "平均気温(℃)_2": 100,
     "平均気温(℃)_3": 100
