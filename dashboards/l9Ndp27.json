@@ -7,7 +7,7 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": 4,
+              "top": 0,
               "left": 0,
               "width": 7,
               "height": 4
@@ -31,32 +31,9 @@
             "tileType": "INSIGHT",
             "box": {
               "top": 0,
-              "left": 0,
-              "width": 7,
+              "left": 7,
+              "width": 5,
               "height": 4
-            },
-            "clickAction": "OPEN_INSIGHT",
-            "tileParams": {
-              "showXAxis": true,
-              "showYAxis": true,
-              "showLegend": false,
-              "showTooltips": true,
-              "autoPlayAnimation": true
-            },
-            "autoLoad": true,
-            "showTitle": "YES",
-            "insightId": "tV19D81",
-            "insightType": "chart",
-            "displayMode": "INSIGHT",
-            "resizeImageMode": "FIT_SIZE"
-          },
-          {
-            "tileType": "INSIGHT",
-            "box": {
-              "top": -1,
-              "left": -1,
-              "width": 2,
-              "height": 2
             },
             "clickAction": "OPEN_INSIGHT",
             "tileParams": {
@@ -79,11 +56,11 @@
   "name": "Cherry blossom\u0027s default dashboard",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 8,
+    "versionNumber": 9,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1612801544424
+    "lastModifiedOn": 1612801566913
   },
   "creationTag": {
     "versionNumber": 0,
