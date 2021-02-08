@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1612800830204
+    "lastModifiedOn": 1612801263543
   },
   "creationTag": {
     "versionNumber": 0,
@@ -204,6 +204,21 @@
         }
       },
       {
+        "type": "python",
+        "enabled": true,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Python probe",
+          "level": 8
+        },
+        "configuration": {
+          "code": "# Define here a function that returns the metric.\ndef process(dataset, partition_id):\n    df\u003ddataset.get_dataframe()\n    df[\u0027\u0027]\n    # dataset is a dataiku.Dataset object\n    return {\u0027metric_name1\u0027 : 42, \u0027metric_name2\u0027 : True}\n",
+          "envSelection": {
+            "envMode": "INHERIT"
+          }
+        }
+      },
+      {
         "type": "cell",
         "enabled": false,
         "computeOnBuildMode": "NO",
@@ -240,7 +255,7 @@
           "level": 8
         },
         "configuration": {
-          "code": "# Define here a function that returns the metric.\ndef process(dataset, partition_id):\n    df\u003ddataset.get_dataframe()\n    df[\u0027\u0027]\n    # dataset is a dataiku.Dataset object\n    return {\u0027metric_name1\u0027 : 42, \u0027metric_name2\u0027 : True}\n",
+          "code": "# Define here a function that returns the metric.\ndef process(dataset, partition_id):\n    df \u003d dataset.get_dataframe().sort_values(\u0027date\u0027, ascending\u003dFalse).reset_index(drop\u003dTrue)\n    # print(df[\u0027date\u0027].max())\n    # blooming_day \u003d df[df[\u0027date\u0027]\u003d\u003ddf[\u0027date\u0027].max()].blooming_day.values[0]\n    # dataset is a dataiku.Dataset object\n    return {\u0027Blooming day\u0027 : df.iloc[0, :][\"blooming_day\"]}\n",
           "envSelection": {
             "envMode": "INHERIT"
           }
