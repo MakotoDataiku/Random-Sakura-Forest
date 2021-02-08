@@ -3,7 +3,7 @@
   "rebuildBehavior": "EXPLICIT",
   "name": "Prediction (RANDOM_FOREST_REGRESSION) on history",
   "contentType": "prediction/py_memory",
-  "activeVersion": "initial",
+  "activeVersion": "1612808715369",
   "conditionalOutputs": [],
   "partitioning": {
     "ignoreNonMatchingFile": false,
@@ -1748,11 +1748,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1612799299849
+    "lastModifiedOn": 1612808914366
   },
   "creationTag": {
     "versionNumber": 0,
