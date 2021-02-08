@@ -11,6 +11,9 @@
           "map": {
             "blooming_days_joined": {
               "repartition": 10
+            },
+            "blooming_days_shifted": {
+              "repartition": 10
             }
           }
         },
@@ -69,11 +72,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1612796841364
+    "lastModifiedOn": 1612796899168
   },
   "creationTag": {
     "versionNumber": 0,

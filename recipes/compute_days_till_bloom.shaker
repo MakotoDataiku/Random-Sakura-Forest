@@ -38,7 +38,7 @@
       "type": "DateDifference",
       "params": {
         "output": "days_till_bloom",
-        "input2": "blooming_day",
+        "input2": "blooming_day_shift",
         "outputUnit": "DAYS",
         "input1": "date",
         "compareTo": "COLUMN",
@@ -53,10 +53,11 @@
       "type": "ColumnsSelector",
       "params": {
         "columns": [
-          "blooming_day"
+          "blooming_day",
+          "blooming_day_shift"
         ],
         "keep": false,
-        "appliesTo": "SINGLE_COLUMN"
+        "appliesTo": "COLUMNS"
       },
       "alwaysShowComment": false
     }
@@ -72,6 +73,7 @@
     "blooming_day": 183,
     "date": 183,
     "flower_status": 113,
+    "blooming_day_shift": 183,
     "month": 100,
     "days_till_bloom": 128,
     "year": 100,
