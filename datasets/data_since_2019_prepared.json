@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1612807255509
+    "lastModifiedOn": 1612807263610
   },
   "creationTag": {
     "versionNumber": 0,
@@ -93,14 +93,6 @@
       {
         "name": "temperature",
         "type": "double"
-      },
-      {
-        "name": "平均気温(℃)_2",
-        "type": "bigint"
-      },
-      {
-        "name": "平均気温(℃)_3",
-        "type": "bigint"
       }
     ],
     "userModified": true
