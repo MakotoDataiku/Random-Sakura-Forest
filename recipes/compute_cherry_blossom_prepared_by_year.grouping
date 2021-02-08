@@ -154,6 +154,18 @@
   "outputColumnNameOverrides": {},
   "computedColumns": [],
   "postFilter": {
+    "uiData": {
+      "mode": "\u0026\u0026",
+      "conditions": [
+        {
+          "input": "flower_status",
+          "col": "flower_status",
+          "string": "bloom",
+          "num": 0,
+          "operator": "\u003d\u003d [string]"
+        }
+      ]
+    },
     "$status": {
       "schema": {
         "columns": [
@@ -175,9 +187,13 @@
           }
         ],
         "userModified": false
-      }
+      },
+      "validated": true,
+      "fullyTranslated": false,
+      "ok": false,
+      "message": "Filter expression is invalid"
     },
     "distinct": false,
-    "enabled": false
+    "enabled": true
   }
 }
