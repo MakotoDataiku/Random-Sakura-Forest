@@ -29,5 +29,5 @@ df
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Write recipe outputs
-not_blooming_yet = dataiku.Dataset("past_temp")
+not_blooming_yet = dataiku.Dataset("past_temperature")
 not_blooming_yet.write_with_schema(df)
