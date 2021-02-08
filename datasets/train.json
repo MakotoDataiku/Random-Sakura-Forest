@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1612784727296
+    "lastModifiedOn": 1612784773132
   },
   "creationTag": {
     "versionNumber": 0,
@@ -85,7 +85,35 @@
     }
   },
   "schema": {
-    "columns": [],
+    "columns": [
+      {
+        "name": "date",
+        "type": "date"
+      },
+      {
+        "name": "year",
+        "type": "bigint"
+      },
+      {
+        "name": "month",
+        "type": "bigint"
+      },
+      {
+        "name": "day",
+        "type": "bigint"
+      },
+      {
+        "name": "past_temp",
+        "type": "array",
+        "arrayContent": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "flower_status",
+        "type": "string"
+      }
+    ],
     "userModified": true
   },
   "metrics": {
