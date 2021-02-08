@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1612797988894
+    "lastModifiedOn": 1612798680091
   },
   "creationTag": {
     "versionNumber": 0,
@@ -92,7 +92,7 @@
       },
       {
         "name": "days_till_bloom",
-        "type": "bigint"
+        "type": "double"
       },
       {
         "name": "year",
