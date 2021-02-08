@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1612785998582
+    "lastModifiedOn": 1612787149097
   },
   "creationTag": {
     "versionNumber": 0,
@@ -85,8 +85,37 @@
     }
   },
   "schema": {
-    "columns": [],
-    "userModified": true
+    "columns": [
+      {
+        "name": "date",
+        "type": "date"
+      },
+      {
+        "name": "day",
+        "type": "double"
+      },
+      {
+        "name": "days_till_bloom",
+        "type": "double"
+      },
+      {
+        "name": "flower_status",
+        "type": "string"
+      },
+      {
+        "name": "month",
+        "type": "double"
+      },
+      {
+        "name": "temperature",
+        "type": "double"
+      },
+      {
+        "name": "year",
+        "type": "double"
+      }
+    ],
+    "userModified": false
   },
   "metrics": {
     "probes": [
