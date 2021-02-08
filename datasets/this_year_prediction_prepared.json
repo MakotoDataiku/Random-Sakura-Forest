@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1612799418704
+    "lastModifiedOn": 1612799533203
   },
   "creationTag": {
     "versionNumber": 0,
@@ -124,6 +124,10 @@
       {
         "name": "prediction",
         "type": "double"
+      },
+      {
+        "name": "blooming_day",
+        "type": "date"
       }
     ],
     "userModified": true
