@@ -59,6 +59,25 @@
     }
   ],
   "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "date",
+            "type": "string"
+          },
+          {
+            "name": "temperature",
+            "type": "string"
+          },
+          {
+            "name": "flower_status",
+            "type": "string"
+          }
+        ],
+        "userModified": false
+      }
+    },
     "distinct": false,
     "enabled": false
   },
