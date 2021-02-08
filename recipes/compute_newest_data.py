@@ -67,7 +67,7 @@ utc = utc.replace(tzinfo=from_zone)
 jpn_time = utc.astimezone(to_zone)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-today = str(jpn_time.year)+"-"+str(jpn_time.month)+"-"+str(jpn_time.day)
+today = str(jpn_time.year)+"/"+str(jpn_time.month)+"/"+str(jpn_time.day)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 df = pd.DataFrame({"date":[today], "temperature":[temp_ave]})
