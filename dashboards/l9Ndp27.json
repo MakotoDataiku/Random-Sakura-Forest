@@ -48,6 +48,7 @@
           }
         ]
       },
+      "title": "Prediction result",
       "showTitle": false
     }
   ],
@@ -56,11 +57,11 @@
   "name": "Cherry blossom\u0027s default dashboard",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 13,
+    "versionNumber": 14,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1612814656673
+    "lastModifiedOn": 1612814668017
   },
   "creationTag": {
     "versionNumber": 0,
