@@ -22,7 +22,7 @@
     },
     "sorting": [
       {
-        "column": "blooming_day",
+        "column": "date",
         "ascending": false
       }
     ],
