@@ -50,6 +50,14 @@
       },
       "title": "Prediction result",
       "showTitle": false
+    },
+    {
+      "id": "V6PPojY",
+      "grid": {
+        "tiles": []
+      },
+      "title": "Model analysis",
+      "showTitle": false
     }
   ],
   "owner": "admin",
@@ -57,11 +65,11 @@
   "name": "Cherry blossom\u0027s default dashboard",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 14,
+    "versionNumber": 15,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1612814668017
+    "lastModifiedOn": 1612814676398
   },
   "creationTag": {
     "versionNumber": 0,
