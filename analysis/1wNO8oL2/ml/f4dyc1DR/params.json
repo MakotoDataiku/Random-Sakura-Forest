@@ -277,8 +277,7 @@
           "min": 1
         },
         "values": [
-          100,
-          200
+          100
         ],
         "range": {
           "min": 80,
@@ -889,7 +888,7 @@
           "scaling": "LOGARITHMIC"
         }
       },
-      "enabled": true
+      "enabled": false
     },
     "lasso_regression": {
       "alphaMode": "AUTO_CV",
