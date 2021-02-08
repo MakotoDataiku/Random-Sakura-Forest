@@ -39,5 +39,5 @@ for year in df.year.unique():
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Write recipe outputs
-blooming_days_fixed = dataiku.Dataset("blooming_days_fixed")
+blooming_days_fixed = dataiku.Dataset("blooming_days_shifted")
 blooming_days_fixed.write_with_schema(df_new)
