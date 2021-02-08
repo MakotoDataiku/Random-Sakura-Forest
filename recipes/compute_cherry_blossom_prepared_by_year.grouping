@@ -5,7 +5,37 @@
   },
   "keys": [
     {
-      "column": "year"
+      "countDistinct": false,
+      "min": false,
+      "avg": false,
+      "last": false,
+      "max": false,
+      "column": "year",
+      "count": false,
+      "sum": false,
+      "concat": false,
+      "type": "bigint",
+      "stddev": false,
+      "first": false
+    },
+    {
+      "last": false,
+      "max": false,
+      "firstLastNotNull": false,
+      "column": "flower_status",
+      "count": false,
+      "$idx": 4,
+      "sum": false,
+      "concat": false,
+      "type": "string",
+      "concatDistinct": false,
+      "sum2": false,
+      "min": false,
+      "countDistinct": false,
+      "avg": false,
+      "$selected": false,
+      "stddev": false,
+      "first": false
     }
   ],
   "values": [
@@ -15,15 +45,20 @@
       "firstLastNotNull": false,
       "column": "date",
       "count": false,
+      "$idx": 0,
       "sum": false,
       "concat": false,
+      "type": "string",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
       "countDistinct": false,
       "avg": false,
+      "$selected": false,
       "stddev": false,
-      "first": false
+      "first": true,
+      "orderColumn": "date",
+      "concatSeparator": ","
     },
     {
       "last": false,
@@ -31,8 +66,10 @@
       "firstLastNotNull": false,
       "column": "month",
       "count": false,
+      "$idx": 1,
       "sum": false,
       "concat": false,
+      "type": "bigint",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -47,8 +84,10 @@
       "firstLastNotNull": false,
       "column": "day",
       "count": false,
+      "$idx": 2,
       "sum": false,
       "concat": false,
+      "type": "bigint",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -63,24 +102,10 @@
       "firstLastNotNull": false,
       "column": "temperature",
       "count": false,
+      "$idx": 3,
       "sum": false,
       "concat": false,
-      "concatDistinct": false,
-      "sum2": false,
-      "min": false,
-      "countDistinct": false,
-      "avg": false,
-      "stddev": false,
-      "first": false
-    },
-    {
-      "last": false,
-      "max": false,
-      "firstLastNotNull": false,
-      "column": "flower_status",
-      "count": false,
-      "sum": false,
-      "concat": false,
+      "type": "double",
       "concatDistinct": false,
       "sum2": false,
       "min": false,
@@ -126,8 +151,32 @@
     }
   },
   "enlargeYourBits": true,
+  "outputColumnNameOverrides": {},
   "computedColumns": [],
   "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "year",
+            "type": "bigint"
+          },
+          {
+            "name": "flower_status",
+            "type": "string"
+          },
+          {
+            "name": "date_first",
+            "type": "string"
+          },
+          {
+            "name": "count",
+            "type": "bigint"
+          }
+        ],
+        "userModified": false
+      }
+    },
     "distinct": false,
     "enabled": false
   }
