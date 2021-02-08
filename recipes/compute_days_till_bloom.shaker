@@ -60,6 +60,17 @@
         "appliesTo": "COLUMNS"
       },
       "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "if(days_till_bloom \u003c 0, \"\", days_till_bloom)",
+        "column": "days_till_bloom"
+      },
+      "alwaysShowComment": false
     }
   ],
   "maxProcessedMemTableBytes": -1,
@@ -81,7 +92,12 @@
     "since_blooming_day_days": 188,
     "day": 100
   },
-  "sorting": [],
+  "sorting": [
+    {
+      "column": "date",
+      "ascending": true
+    }
+  ],
   "globalSearchQuery": "",
   "coloring": {
     "scheme": "MEANING_AND_STATUS",
