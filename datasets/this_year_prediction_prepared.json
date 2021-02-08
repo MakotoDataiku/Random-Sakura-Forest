@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 8,
+    "versionNumber": 9,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1612801347055
+    "lastModifiedOn": 1612801393040
   },
   "creationTag": {
     "versionNumber": 0,
@@ -255,7 +255,7 @@
           "level": 8
         },
         "configuration": {
-          "code": "# Define here a function that returns the metric.\ndef process(dataset, partition_id):\n    df \u003d dataset.get_dataframe().sort_values(\u0027date\u0027, ascending\u003dFalse).reset_index(drop\u003dTrue)\n    # print(df[\u0027date\u0027].max())\n    # blooming_day \u003d df[df[\u0027date\u0027]\u003d\u003ddf[\u0027date\u0027].max()].blooming_day.values[0]\n    # dataset is a dataiku.Dataset object\n    b_day \u003d df.iloc[0, :][\"blooming_day\"]\n    return {\u0027Blooming day\u0027 : b_day}\n",
+          "code": "# Define here a function that returns the metric.\ndef process(dataset, partition_id):\n    df \u003d dataset.get_dataframe().sort_values(\u0027date\u0027, ascending\u003dFalse).reset_index(drop\u003dTrue)\n    # print(df[\u0027date\u0027].max())\n    # blooming_day \u003d df[df[\u0027date\u0027]\u003d\u003ddf[\u0027date\u0027].max()].blooming_day.values[0]\n    # dataset is a dataiku.Dataset object\n    b_day \u003d df.iloc[0, :][\"blooming_day\"]\n    b_day \u003d str(b_day).split(\u0027 \u0027)[0]\n    return {\u0027Blooming day\u0027 : b_day}\n",
           "envSelection": {
             "envMode": "INHERIT"
           }
