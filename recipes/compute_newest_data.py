@@ -71,3 +71,11 @@ today = str(jpn_time.year)+"-"+str(jpn_time.month)+"-"+str(jpn_time.day)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 df = pd.DataFrame({"date":[today], "temperature":[temp_ave]})
+
+
+
+py_recipe_output = dataiku.Dataset("newest_data")
+py_recipe_output.write_with_schema(df)
+
+
+
