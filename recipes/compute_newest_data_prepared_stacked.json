@@ -26,17 +26,17 @@
       "items": [
         {
           "ref": "newest_data_prepared_stacked",
-          "appendMode": false
+          "appendMode": true
         }
       ]
     }
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1612803828957
+    "lastModifiedOn": 1612803843703
   },
   "creationTag": {
     "versionNumber": 0,
