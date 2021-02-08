@@ -46,15 +46,12 @@
         "distinct": false,
         "enabled": false
       },
-      "originLabel": "newest_data_prepared",
+      "originLabel": "cherry_blossom",
       "index": 0
     },
     {
-      "preFilter": {
-        "distinct": false,
-        "enabled": false
-      },
-      "originLabel": "cherry_blossom",
+      "preFilter": {},
+      "originLabel": "newest_data",
       "index": 1
     }
   ],
