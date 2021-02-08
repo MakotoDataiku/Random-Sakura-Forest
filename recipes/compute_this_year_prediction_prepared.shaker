@@ -26,8 +26,23 @@
     "autoRefreshSample": false
   },
   "explorationFilters": [],
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "inc(date, prediction, \u0027day\u0027)",
+        "column": "blooming_day"
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -35,7 +50,18 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "date": 232,
+    "blooming_day": 183,
+    "flower_status": 113,
+    "days_till_bloom": 128,
+    "month": 100,
+    "year": 100,
+    "temperature": 100,
+    "prediction": 141,
+    "past_temperature": 300,
+    "day": 100
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
