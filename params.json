@@ -120,8 +120,9 @@
       }
     }
   },
-  "name": "Cherry blossom",
+  "name": "Random Sakura Forest",
   "projectStatus": "Sandbox",
+  "imgPattern": 7,
   "metrics": {
     "probes": [],
     "engineConfig": {
@@ -175,6 +176,13 @@
     "displayedState": {
       "checks": []
     }
+  },
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1612784707286
   },
   "creationTag": {
     "versionNumber": 0,
