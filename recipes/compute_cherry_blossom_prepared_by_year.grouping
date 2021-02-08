@@ -115,7 +115,7 @@
       "first": false
     }
   ],
-  "globalCount": true,
+  "globalCount": false,
   "engineParams": {
     "hive": {
       "skipPrerunValidate": false,
@@ -180,10 +180,6 @@
           {
             "name": "date_first",
             "type": "string"
-          },
-          {
-            "name": "count",
-            "type": "bigint"
           }
         ],
         "userModified": false
