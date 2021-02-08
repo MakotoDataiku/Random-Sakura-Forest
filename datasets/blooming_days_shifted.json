@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1612796708078
+    "lastModifiedOn": 1612796740177
   },
   "creationTag": {
     "versionNumber": 0,
@@ -85,8 +85,41 @@
     }
   },
   "schema": {
-    "columns": [],
-    "userModified": true
+    "columns": [
+      {
+        "name": "blooming_day",
+        "type": "string"
+      },
+      {
+        "name": "date",
+        "type": "string"
+      },
+      {
+        "name": "year",
+        "type": "bigint"
+      },
+      {
+        "name": "month",
+        "type": "bigint"
+      },
+      {
+        "name": "day",
+        "type": "bigint"
+      },
+      {
+        "name": "temperature",
+        "type": "double"
+      },
+      {
+        "name": "flower_status",
+        "type": "string"
+      },
+      {
+        "name": "blooming_day_shift",
+        "type": "string"
+      }
+    ],
+    "userModified": false
   },
   "metrics": {
     "probes": [
