@@ -98,7 +98,12 @@
     "day": 100,
     "date_parsed": 183
   },
-  "sorting": [],
+  "sorting": [
+    {
+      "column": "date",
+      "ascending": true
+    }
+  ],
   "globalSearchQuery": "",
   "coloring": {
     "scheme": "MEANING_AND_STATUS",

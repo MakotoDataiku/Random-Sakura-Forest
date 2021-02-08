@@ -11,6 +11,9 @@
           "map": {
             "cherry_blossom": {
               "repartition": 10
+            },
+            "newest_data_prepared_stacked": {
+              "repartition": 10
             }
           }
         },
@@ -69,11 +72,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 3,
+    "versionNumber": 4,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1612804065297
+    "lastModifiedOn": 1612804110490
   },
   "creationTag": {
     "versionNumber": 0,
