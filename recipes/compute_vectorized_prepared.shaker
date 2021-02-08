@@ -32,7 +32,26 @@
   },
   "steps": [
     {
-      "preview": true,
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "DateParser",
+      "params": {
+        "outCol": "",
+        "formats": [
+          "yyyy/MM/dd"
+        ],
+        "columns": [
+          "date"
+        ],
+        "timezone_id": "UTC",
+        "appliesTo": "SINGLE_COLUMN",
+        "lang": "auto"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
       "type": "DateComponentsExtractor",
@@ -42,6 +61,20 @@
         "column": "date",
         "timezone_id": "UTC",
         "outDayColumn": "day"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FillEmptyWithValue",
+      "params": {
+        "columns": [
+          "flower_status"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "value": "not yet"
       },
       "alwaysShowComment": false
     }
@@ -62,7 +95,8 @@
     "month": 100,
     "year": 100,
     "date_day": 100,
-    "day": 100
+    "day": 100,
+    "date_parsed": 183
   },
   "sorting": [],
   "globalSearchQuery": "",
