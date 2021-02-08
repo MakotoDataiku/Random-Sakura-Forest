@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1612784832858
+    "lastModifiedOn": 1612784837321
   },
   "creationTag": {
     "versionNumber": 0,
@@ -85,7 +85,56 @@
     }
   },
   "schema": {
-    "columns": [],
+    "columns": [
+      {
+        "name": "date",
+        "type": "date"
+      },
+      {
+        "name": "year",
+        "type": "bigint"
+      },
+      {
+        "name": "month",
+        "type": "bigint"
+      },
+      {
+        "name": "day",
+        "type": "bigint"
+      },
+      {
+        "name": "past_temp",
+        "type": "string"
+      },
+      {
+        "name": "flower_status",
+        "type": "string"
+      },
+      {
+        "name": "proba_not yet",
+        "type": "double"
+      },
+      {
+        "name": "proba_bloom",
+        "type": "double"
+      },
+      {
+        "name": "proba_scatter",
+        "type": "double"
+      },
+      {
+        "name": "proba_full",
+        "type": "double"
+      },
+      {
+        "name": "prediction",
+        "type": "string"
+      },
+      {
+        "name": "prediction_correct",
+        "type": "boolean"
+      }
+    ],
     "userModified": true
   },
   "metrics": {
