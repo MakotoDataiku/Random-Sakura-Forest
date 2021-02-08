@@ -5,8 +5,9 @@
     "weightMethod": "CLASS_WEIGHT"
   },
   "time": {
-    "enabled": false,
-    "ascending": true
+    "enabled": true,
+    "ascending": true,
+    "timeVariable": "date"
   },
   "calibration": {
     "calibrationMethod": "NO_CALIBRATION"
@@ -14,7 +15,7 @@
   "guessPolicy": "DEFAULT",
   "splitParams": {
     "ttPolicy": "SPLIT_SINGLE_DATASET",
-    "ssdSplitMode": "RANDOM",
+    "ssdSplitMode": "SORTED",
     "splitBeforePrepare": true,
     "ssdSelection": {
       "useMemTable": false,
@@ -37,6 +38,46 @@
     "ssdTrainingRatio": 0.8,
     "ssdSeed": 1337,
     "testOnLargerValues": true,
+    "efsdTrain": {
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "maxRecords": 100000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      }
+    },
+    "efsdTest": {
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "maxRecords": 100000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      }
+    },
     "kfold": false,
     "nFolds": 5,
     "instanceIdRefresher": 0,
@@ -100,6 +141,7 @@
     "per_feature": {
       "date": {
         "generate_derivative": false,
+        "missing_handling": "DROP_ROW",
         "impute_constant_value": 0.0,
         "quantile_bin_nb_bins": 4,
         "binarize_threshold_mode": "MEDIAN",
@@ -111,7 +153,6 @@
           "autoModifiedByDSS": false,
           "recordedMeaning": "Date"
         },
-        "autoReason": "REJECT_IDENTIFIER",
         "customHandlingCode": "",
         "customProcessorWantsMatrix": false,
         "sendToInput": "main"
@@ -1060,7 +1101,7 @@
         }
       },
       "n_jobs": 2,
-      "enabled": true
+      "enabled": false
     },
     "neural_network": {
       "layer_sizes": {
@@ -1845,7 +1886,7 @@
     },
     "grid_search": true,
     "gridSearchParams": {
-      "mode": "KFOLD",
+      "mode": "TIME_SERIES_KFOLD",
       "splitRatio": 0.8,
       "shuffleIterations": 1,
       "nFolds": 3,
