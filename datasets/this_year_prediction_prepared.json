@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 15,
+    "versionNumber": 16,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1612809221107
+    "lastModifiedOn": 1612809239843
   },
   "creationTag": {
     "versionNumber": 0,
@@ -268,7 +268,8 @@
         "basic:SIZE",
         "records:COUNT_RECORDS",
         "python:Blooming day:Blooming day",
-        "reporting:BUILD_START_DATE"
+        "reporting:BUILD_START_DATE",
+        "python:Blooming day:Python probe"
       ]
     }
   },
