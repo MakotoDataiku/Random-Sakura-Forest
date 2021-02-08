@@ -7,21 +7,27 @@ from dataiku import pandasutils as pdu
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Read recipe inputs
 days_till_bloom = dataiku.Dataset("days_till_bloom")
-df = days_till_bloom.get_dataframe().sort_values('date', ascending=True)
+df = days_till_bloom.get_dataframe().sort_values('date', ascending=False).reset_index(drop=True)
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 df.head()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-new_df = pd.DataFrame()
-for year in df.year.unique():
-    for index, row in df.iterrows():
-        if row['flower_status']!='bloom':
-            new_df = new_df.append(row, ignore_index=False)
-        else:
-            break
+length = 100
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+df['past_temperature'] = np.nan
+long_vec = df['temperature'].values.tolist()
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+for i in range(0, df.shape[0]):
+    small_vec = str(long_vec[i+1:i+length][::-1])
+    df.loc[i, "past_temperature"]=small_vec
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+df
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Write recipe outputs
-not_blooming_yet = dataiku.Dataset("not_blooming_yet")
-not_blooming_yet.write_with_schema(new_df)
+not_blooming_yet = dataiku.Dataset("past_temp")
+not_blooming_yet.write_with_schema(df)
