@@ -35,15 +35,3 @@ df_win = pd.DataFrame.from_dict({'date': steps, 'past_temp': x, 'flower_status':
 # Write recipe outputs
 series_window = dataiku.Dataset("vecrotized")
 series_window.write_with_schema(df_win)
-
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-# Compute recipe outputs from inputs
-# TODO: Replace this part by your actual code that computes the output, as a Pandas dataframe
-# NB: DSS also supports other kinds of APIs for reading and writing data. Please see doc.
-
-vectorized_df = cherry_blossom_prepared_df # For this sample code, simply copy input to output
-
-
-# Write recipe outputs
-vectorized = dataiku.Dataset("vectorized")
-vectorized.write_with_schema(vectorized_df)
