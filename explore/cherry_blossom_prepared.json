@@ -1,0 +1,197 @@
+{
+  "script": {
+    "steps": [],
+    "maxProcessedMemTableBytes": -1,
+    "columnsSelection": {
+      "mode": "ALL"
+    },
+    "columnWidthsByName": {},
+    "coloring": {
+      "scheme": "MEANING_AND_STATUS",
+      "individualColumns": [],
+      "valueColoringMode": "HASH"
+    },
+    "sorting": [],
+    "analysisColumnData": {},
+    "explorationSampling": {
+      "selection": {
+        "maxStoredBytes": 104857600,
+        "timeout": -1,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "maxRecords": 10000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "vizSampling": {
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "exploreUIParams": {},
+    "globalSearchQuery": "",
+    "explorationFilters": [],
+    "previewMode": "ALL_ROWS"
+  },
+  "charts": [
+    {
+      "copySelectionFromScript": true,
+      "engineType": "LINO",
+      "def": {
+        "type": "lines",
+        "variant": "normal",
+        "name": "Temperature over time",
+        "userEditedName": true,
+        "genericDimension0": [
+          {
+            "column": "date",
+            "type": "DATE",
+            "numParams": {
+              "emptyBinsMode": "AVERAGE"
+            },
+            "dateParams": {
+              "mode": "AUTOMATIC"
+            },
+            "maxValues": 0,
+            "generateOthersCategory": true,
+            "oneTickPerBin": false,
+            "filters": [],
+            "isA": "dimension",
+            "possibleSorts": [
+              {
+                "type": "NATURAL",
+                "label": "Natural ordering",
+                "sortAscending": true
+              },
+              {
+                "type": "AGGREGATION",
+                "measureIdx": 0,
+                "label": "Average of temperature, descending"
+              },
+              {
+                "type": "AGGREGATION",
+                "measureIdx": 0,
+                "label": "Average of temperature, ascending",
+                "sortAscending": true
+              }
+            ],
+            "sort": {
+              "type": "NATURAL",
+              "label": "Natural ordering",
+              "sortAscending": true
+            }
+          }
+        ],
+        "genericDimension1": [],
+        "facetDimension": [],
+        "animationDimension": [],
+        "genericMeasures": [
+          {
+            "column": "temperature",
+            "function": "AVG",
+            "type": "NUMERICAL",
+            "displayed": true,
+            "isA": "measure",
+            "displayAxis": "axis1",
+            "displayType": "column",
+            "computeMode": "NORMAL",
+            "computeModeDim": 0
+          }
+        ],
+        "xDimension": [],
+        "yDimension": [],
+        "uaXDimension": [],
+        "uaYDimension": [],
+        "uaSize": [],
+        "uaShape": [],
+        "uaColor": [],
+        "uaTooltip": [],
+        "groupDimension": [],
+        "xMeasure": [],
+        "yMeasure": [],
+        "colorMeasure": [],
+        "sizeMeasure": [],
+        "geometry": [],
+        "tooltipMeasures": [],
+        "boxplotBreakdownDim": [],
+        "boxplotValue": [],
+        "filters": [],
+        "axis1LogScale": false,
+        "axis2LogScale": false,
+        "includeZero": true,
+        "smoothing": true,
+        "showLegend": true,
+        "showXAxis": false,
+        "showInChartValues": false,
+        "showInChartLabels": true,
+        "strokeWidth": 1,
+        "fillOpacity": 0.6,
+        "showXAxisLabel": true,
+        "showYAxisLabel": true,
+        "hexbinRadius": 20,
+        "hexbinNumber": 20,
+        "hexbinRadiusMode": "NUM_HEXAGONS",
+        "chartHeight": 200,
+        "singleXAxis": true,
+        "multiTooltips": false,
+        "animationFrameDuration": 3000,
+        "animationRepeat": true,
+        "colorOptions": {
+          "singleColor": "#2678B1",
+          "transparency": 0.75,
+          "colorPalette": "default",
+          "ccScaleMode": "NORMAL",
+          "customPalette": {
+            "id": "__dku_custom__",
+            "name": "Custom Palette",
+            "colors": [],
+            "values": [],
+            "fixedValues": false
+          },
+          "paletteType": "CONTINUOUS",
+          "quantizationMode": "NONE",
+          "numQuantizeSteps": 5,
+          "paletteMiddleValue": 0.0
+        },
+        "bubblesOptions": {
+          "defaultRadius": 5.0,
+          "singleShape": "FILLED_CIRCLE"
+        },
+        "xAxisMode": "NORMAL",
+        "yAxisMode": "NORMAL",
+        "pieOptions": {
+          "donutHoleSize": 54.0
+        },
+        "scatterOptions": {
+          "equalScales": false,
+          "identityLine": false
+        },
+        "mapOptions": {
+          "tilesLayer": "cartodb-positron",
+          "lockSquareGrid": false
+        },
+        "mapGridOptions": {
+          "gridLonDeg": 0.5,
+          "gridLatDeg": 0.5
+        },
+        "thumbnailData": "data:image/png;base64,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\u003d\u003d",
+        "disableSafetyLimits": false,
+        "useLiveProcessingIfAvailable": true,
+        "legendPlacement": "OUTER_RIGHT"
+      },
+      "maxDataBytes": 157286400
+    }
+  ]
+}
