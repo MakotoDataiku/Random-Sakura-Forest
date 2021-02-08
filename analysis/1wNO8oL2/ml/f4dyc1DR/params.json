@@ -28,7 +28,7 @@
         "enabled": false,
         "rules": []
       },
-      "samplingMethod": "HEAD_SEQUENTIAL",
+      "samplingMethod": "FULL",
       "maxRecords": 100000,
       "targetRatio": 0.02,
       "withinFirstN": -1,
@@ -106,7 +106,7 @@
         "max_cat_safety": 200,
         "nb_bins_hashing": 1048576,
         "dummy_drop": "AUTO",
-        "role": "INPUT",
+        "role": "REJECT",
         "type": "CATEGORY",
         "state": {
           "userModified": false,
@@ -177,23 +177,25 @@
         "sendToInput": "main"
       },
       "temperature": {
-        "generate_derivative": false,
-        "numerical_handling": "REGULAR",
-        "missing_handling": "IMPUTE",
-        "missing_impute_with": "MEAN",
-        "impute_constant_value": 0.0,
-        "rescaling": "AVGSTD",
-        "quantile_bin_nb_bins": 4,
-        "binarize_threshold_mode": "MEDIAN",
-        "binarize_constant_threshold": 0.0,
+        "text_handling": "CUSTOM",
+        "minRowsRatio": 0.001,
+        "maxRowsRatio": 0.8,
+        "maxWords": 0,
+        "ngramMinSize": 1,
+        "ngramMaxSize": 1,
+        "hashSize": 200000,
+        "hashSVDSVDLimit": 50000,
+        "hashSVDSVDComponents": 100,
+        "stopWordsMode": "NONE",
+        "useCustomVectorizer": false,
         "role": "INPUT",
-        "type": "NUMERIC",
+        "type": "TEXT",
         "state": {
-          "userModified": false,
+          "userModified": true,
           "autoModifiedByDSS": false,
           "recordedMeaning": "DoubleMeaning"
         },
-        "customHandlingCode": "",
+        "customHandlingCode": "from windowprocessor.windowprocessor import windowProcessor\n\nprocessor \u003d windowProcessor(100)",
         "customProcessorWantsMatrix": false,
         "sendToInput": "main"
       },
@@ -1796,48 +1798,48 @@
             "gbdt"
           ],
           "num_leaves": [
-            50.0,
-            100.0
+            50,
+            100
           ],
           "max_depth": [
-            50.0,
-            100.0
+            50,
+            100
           ],
           "learning_rate": [
             0.2
           ],
           "n_estimators": [
-            50.0,
-            100.0
+            50,
+            100
           ],
           "early_stopping": false,
-          "early_stopping_rounds": 4.0,
+          "early_stopping_rounds": 4,
           "min_split_gain": [
-            0.0
+            0
           ],
           "min_child_weight": [
             0.001
           ],
           "min_child_samples": [
-            20.0
+            20
           ],
           "subsample": [
-            1.0
+            1
           ],
           "subsample_freq": [
-            0.0
+            0
           ],
           "colsample_bytree": [
-            1.0
+            1
           ],
           "reg_alpha": [
-            0.0
+            0
           ],
           "reg_lambda": [
-            0.0
+            0
           ],
-          "random_state": 1337.0,
-          "n_jobs": 4.0
+          "random_state": 1337,
+          "n_jobs": 4
         },
         "supportsSampleWeights": false,
         "acceptsSparseMatrix": false,
@@ -1850,13 +1852,13 @@
         "name": "Plugin Adaboost",
         "params": {
           "n_estimators": [
-            50.0,
-            100.0
+            50,
+            100
           ],
           "loss": [
             "linear"
           ],
-          "random_state": 1337.0
+          "random_state": 1337
         },
         "supportsSampleWeights": false,
         "acceptsSparseMatrix": false,
@@ -1919,7 +1921,8 @@
   "backendType": "PY_MEMORY",
   "maxConcurrentModelTraining": 2,
   "envSelection": {
-    "envMode": "USE_BUILTIN_MODE"
+    "envMode": "EXPLICIT_ENV",
+    "envName": "custom-models"
   },
   "containerSelection": {
     "containerMode": "INHERIT"
