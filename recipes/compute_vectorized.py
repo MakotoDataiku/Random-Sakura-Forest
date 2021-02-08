@@ -33,5 +33,5 @@ df_win = pd.DataFrame.from_dict({'date': steps, 'past_temp': x, 'flower_status':
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Write recipe outputs
-series_window = dataiku.Dataset("vecrotized")
+series_window = dataiku.Dataset("vectorized")
 series_window.write_with_schema(df_win)
