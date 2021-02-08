@@ -5,13 +5,25 @@
     "columnsSelection": {
       "mode": "ALL"
     },
-    "columnWidthsByName": {},
+    "columnWidthsByName": {
+      "date": 183,
+      "year": 100,
+      "month": 100,
+      "day": 100,
+      "temperature": 100,
+      "flower_status": 113
+    },
     "coloring": {
       "scheme": "MEANING_AND_STATUS",
       "individualColumns": [],
       "valueColoringMode": "HASH"
     },
-    "sorting": [],
+    "sorting": [
+      {
+        "column": "date",
+        "ascending": false
+      }
+    ],
     "analysisColumnData": {},
     "explorationSampling": {
       "selection": {
@@ -40,7 +52,9 @@
       "autoRefreshSample": false,
       "_refreshTrigger": 0
     },
-    "exploreUIParams": {},
+    "exploreUIParams": {
+      "autoRefresh": true
+    },
     "globalSearchQuery": "",
     "explorationFilters": [],
     "previewMode": "ALL_ROWS"
@@ -169,6 +183,7 @@
           "defaultRadius": 5.0,
           "singleShape": "FILLED_CIRCLE"
         },
+        "computeMode": "NORMAL",
         "xAxisMode": "NORMAL",
         "yAxisMode": "NORMAL",
         "pieOptions": {
