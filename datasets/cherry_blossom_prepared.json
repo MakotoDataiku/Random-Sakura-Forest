@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1612785123770
+    "lastModifiedOn": 1612785188372
   },
   "creationTag": {
     "versionNumber": 0,
@@ -89,6 +89,18 @@
       {
         "name": "date",
         "type": "string"
+      },
+      {
+        "name": "year",
+        "type": "bigint"
+      },
+      {
+        "name": "month",
+        "type": "bigint"
+      },
+      {
+        "name": "day",
+        "type": "bigint"
       },
       {
         "name": "temperature",
