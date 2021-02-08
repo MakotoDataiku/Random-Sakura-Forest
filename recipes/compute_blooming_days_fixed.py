@@ -10,7 +10,7 @@ blooming_days_joined = dataiku.Dataset("blooming_days_joined")
 df = blooming_days_joined.get_dataframe()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-df.head()
+df.tail()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 d = {}
@@ -23,15 +23,17 @@ d
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 df_bloom = df[df.flower_status=='bloom']
-df_bloom.head()
+df_bloom
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 df_new = pd.DataFrame()
-for year in df.year.unique():
+for year in np.sort(df.year.unique()):
+    print(year)
     df_sub = df[df.year==year]
     df_sub['blooming_day_shift'] = df_sub["blooming_day"]
-    blooming_ind = df_bloom[df_bloom.year==year].index[0]
-    if year < 2019:
+
+    if year < 2021:
+        blooming_ind = df_bloom[df_bloom.year==year].index[0]
         df_sub.loc[df_sub.index > blooming_ind, "blooming_day_shift"] = d[year+1]
     else:
         None
