@@ -7,7 +7,7 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": 0,
+              "top": 4,
               "left": 0,
               "width": 7,
               "height": 4
@@ -30,10 +30,10 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": -1,
-              "left": -1,
-              "width": 2,
-              "height": 2
+              "top": 0,
+              "left": 0,
+              "width": 7,
+              "height": 4
             },
             "clickAction": "OPEN_INSIGHT",
             "tileParams": {
@@ -60,11 +60,11 @@
   "name": "Cherry blossom\u0027s default dashboard",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 5,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1612800001857
+    "lastModifiedOn": 1612800021039
   },
   "creationTag": {
     "versionNumber": 0,
