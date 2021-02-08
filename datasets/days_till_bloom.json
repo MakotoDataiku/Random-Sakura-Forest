@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1612785653145
+    "lastModifiedOn": 1612785811535
   },
   "creationTag": {
     "versionNumber": 0,
@@ -87,12 +87,12 @@
   "schema": {
     "columns": [
       {
-        "name": "blooming_day",
+        "name": "date",
         "type": "date"
       },
       {
-        "name": "date",
-        "type": "date"
+        "name": "days_till_bloom",
+        "type": "bigint"
       },
       {
         "name": "year",
