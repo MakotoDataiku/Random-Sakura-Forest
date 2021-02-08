@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1612785268454
+    "lastModifiedOn": 1612785305193
   },
   "creationTag": {
     "versionNumber": 0,
@@ -89,6 +89,14 @@
       {
         "name": "year",
         "type": "bigint"
+      },
+      {
+        "name": "flower_status",
+        "type": "string"
+      },
+      {
+        "name": "date_first",
+        "type": "string"
       },
       {
         "name": "count",
