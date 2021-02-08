@@ -1,0 +1,31 @@
+{
+  "type": "metrics",
+  "params": {
+    "objectSmartId": "this_year_prediction_prepared",
+    "objectType": "DATASET",
+    "metricId": "python:Blooming day:Python probe"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "Blooming day (Python probe) of this_year_prediction_prepared",
+  "dashboardCreationId": "l9Ndp27",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1612801543796
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1612801543796
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
