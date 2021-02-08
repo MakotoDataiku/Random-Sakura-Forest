@@ -6,7 +6,7 @@ from dataiku import pandasutils as pdu
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Read recipe inputs
-cherry_blossom_prepared = dataiku.Dataset("cherry_blossom_prepared")
+cherry_blossom_prepared = dataiku.Dataset("cherry_blossom")
 df_data = cherry_blossom_prepared.get_dataframe().sort_values("date", ascending=False)
 df_data.head()
 
