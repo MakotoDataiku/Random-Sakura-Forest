@@ -3,14 +3,14 @@
   "centileSplits": [
     {
       "outputIndex": 0,
-      "share": 50.0
+      "share": 50
     }
   ],
-  "defaultOutputIndex": 1,
   "preFilter": {
     "distinct": false,
     "enabled": false
   },
+  "defaultOutputIndex": 1,
   "seed": 1337,
   "randomColumns": [],
   "centileOrders": [],
@@ -18,22 +18,24 @@
   "randomSplits": [
     {
       "outputIndex": 0,
-      "share": 50.0
+      "share": 50
     }
   ],
   "randomColumnsSplits": [
     {
       "outputIndex": 0,
-      "share": 50.0
+      "share": 50
     }
   ],
   "computedColumns": [],
   "writeComputedColumnsInOutput": false,
+  "mode": "FILTERS",
   "centileTDigest": false,
   "valueSplits": [
     {
       "outputIndex": 0,
-      "caseSensitive": false
+      "caseSensitive": false,
+      "value": ""
     }
   ],
   "rangeSplits": [
@@ -88,7 +90,51 @@
       "filter": {
         "uiData": {
           "mode": "\u0026\u0026",
-          "conditions": []
+          "conditions": [
+            {
+              "input": "year",
+              "col": "year",
+              "num": 2013,
+              "operator": "\u003c\u003d [number]"
+            }
+          ]
+        },
+        "$status": {
+          "schema": {
+            "columns": [
+              {
+                "name": "date",
+                "type": "date"
+              },
+              {
+                "name": "year",
+                "type": "bigint"
+              },
+              {
+                "name": "month",
+                "type": "bigint"
+              },
+              {
+                "name": "day",
+                "type": "bigint"
+              },
+              {
+                "arrayContent": {
+                  "type": "string"
+                },
+                "name": "past_temp",
+                "type": "array"
+              },
+              {
+                "name": "flower_status",
+                "type": "string"
+              }
+            ]
+          },
+          "validated": true,
+          "fullyTranslated": false,
+          "ok": false,
+          "message": "Filter expression is invalid"
         },
         "distinct": false,
         "enabled": true
