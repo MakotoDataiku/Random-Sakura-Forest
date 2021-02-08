@@ -1,4 +1,21 @@
 {
+  "uiData": {
+    "mode": "\u0026\u0026",
+    "conditions": [
+      {
+        "input": "month",
+        "col": "year",
+        "num": 6,
+        "operator": "\u003c\u003d [number]"
+      }
+    ]
+  },
+  "$status": {
+    "validated": true,
+    "fullyTranslated": false,
+    "ok": false,
+    "message": "Filter expression is invalid"
+  },
   "distinct": false,
-  "enabled": false
+  "enabled": true
 }
