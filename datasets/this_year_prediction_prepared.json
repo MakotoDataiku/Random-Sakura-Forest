@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 11,
+    "versionNumber": 12,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1612801484847
+    "lastModifiedOn": 1612801526288
   },
   "creationTag": {
     "versionNumber": 0,
@@ -206,9 +206,9 @@
       {
         "type": "python",
         "enabled": true,
-        "computeOnBuildMode": "NO",
+        "computeOnBuildMode": "PARTITION",
         "meta": {
-          "name": "Python probe",
+          "name": "Blooming day",
           "level": 8
         },
         "configuration": {
