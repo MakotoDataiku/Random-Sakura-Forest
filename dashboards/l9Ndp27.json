@@ -35,26 +35,7 @@
               "width": 5,
               "height": 4
             },
-            "clickAction": "OPEN_INSIGHT",
-            "tileParams": {
-              "displayMode": "LAST_VALUE"
-            },
-            "autoLoad": true,
-            "showTitle": "YES",
-            "insightId": "hrr18sZ",
-            "insightType": "metrics",
-            "displayMode": "INSIGHT",
-            "resizeImageMode": "FIT_SIZE"
-          },
-          {
-            "tileType": "INSIGHT",
-            "box": {
-              "top": -1,
-              "left": -1,
-              "width": 2,
-              "height": 2
-            },
-            "clickAction": "OPEN_INSIGHT",
+            "clickAction": "DO_NOTHING",
             "tileParams": {
               "displayMode": "LAST_VALUE"
             },
@@ -75,11 +56,11 @@
   "name": "Cherry blossom\u0027s default dashboard",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 11,
+    "versionNumber": 12,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1612809350155
+    "lastModifiedOn": 1612809370396
   },
   "creationTag": {
     "versionNumber": 0,
