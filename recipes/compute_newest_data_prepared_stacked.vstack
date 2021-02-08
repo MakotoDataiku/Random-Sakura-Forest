@@ -42,16 +42,13 @@
   },
   "virtualInputs": [
     {
-      "preFilter": {
-        "distinct": false,
-        "enabled": false
-      },
-      "originLabel": "cherry_blossom",
+      "preFilter": {},
+      "originLabel": "newest_data",
       "index": 0
     },
     {
       "preFilter": {},
-      "originLabel": "newest_data",
+      "originLabel": "cherry_blossom_till_2021",
       "index": 1
     }
   ],
