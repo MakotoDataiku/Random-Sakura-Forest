@@ -127,7 +127,7 @@
     "algorithm": "RANDOM_FOREST_CLASSIFICATION",
     "gridLength": 2
   },
-  "generatingModelId": "A-CHERRYBLOSSOM-93jRcms0-OCbM9XtZ-s5-pp1-m1",
+  "generatingModelId": "A-CHERRYBLOSSOM-93jRcms0-OCbM9XtZ-s7-pp1-m1",
   "preprocessing": {
     "reduce": {
       "kept_variance": 0.0,
@@ -157,11 +157,11 @@
     ],
     "per_feature": {
       "date": {
-        "autoReason": "REJECT_IDENTIFIER",
         "customProcessorWantsMatrix": false,
         "quantile_bin_nb_bins": 4,
         "role": "REJECT",
         "generate_derivative": false,
+        "missing_handling": "DROP_ROW",
         "sendToInput": "main",
         "customHandlingCode": "",
         "binarize_constant_threshold": 0.0,
@@ -368,6 +368,7 @@
     "userModified": false
   },
   "script": {
+    "contextProjectKey": "CHERRYBLOSSOM",
     "columnsSelection": {
       "mode": "ALL"
     },
@@ -473,17 +474,34 @@
     },
     "prediction_type": "MULTICLASS"
   },
-  "operationMode": "TRAIN_SPLITTED_ONLY",
+  "operationMode": "TRAIN_KFOLD",
   "partSource": "ACTIVE_VERSION",
   "envName": "custom-models",
   "splitParams": {
-    "testOnLargerValues": true,
     "instanceIdRefresher": 0,
     "ssdSeed": 1337,
     "nFolds": 5,
-    "subSamplingSeed": 1337,
-    "ssdSplitMode": "RANDOM",
     "splitBeforePrepare": true,
+    "efsdTrain": {
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "latestPartitionsN": 1,
+        "maxRecords": 100000,
+        "ordering": {
+          "rules": [],
+          "enabled": false
+        },
+        "withinFirstN": -1,
+        "partitionSelectionMethod": "ALL",
+        "targetRatio": 0.02,
+        "maxReadUncompressedBytes": -1,
+        "samplingMethod": "HEAD_SEQUENTIAL"
+      }
+    },
     "ssdSelection": {
       "useMemTable": false,
       "filter": {
@@ -503,8 +521,31 @@
       "samplingMethod": "FULL"
     },
     "ssdTrainingRatio": 0.8,
+    "testOnLargerValues": true,
+    "subSamplingSeed": 1337,
+    "ssdSplitMode": "RANDOM",
+    "efsdTest": {
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "latestPartitionsN": 1,
+        "maxRecords": 100000,
+        "ordering": {
+          "rules": [],
+          "enabled": false
+        },
+        "withinFirstN": -1,
+        "partitionSelectionMethod": "ALL",
+        "targetRatio": 0.02,
+        "maxReadUncompressedBytes": -1,
+        "samplingMethod": "HEAD_SEQUENTIAL"
+      }
+    },
     "ttPolicy": "SPLIT_SINGLE_DATASET",
-    "kfold": false
+    "kfold": true
   },
   "sparkParams": {
     "pipelineAllowMerge": true,
