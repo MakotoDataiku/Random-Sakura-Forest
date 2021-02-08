@@ -28,7 +28,7 @@
         "enabled": false,
         "rules": []
       },
-      "samplingMethod": "RANDOM_FIXED_RATIO",
+      "samplingMethod": "FULL",
       "maxRecords": 100000,
       "targetRatio": 0.02,
       "withinFirstN": -1,
