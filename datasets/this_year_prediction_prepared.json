@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 10,
+    "versionNumber": 11,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1612801427116
+    "lastModifiedOn": 1612801484847
   },
   "creationTag": {
     "versionNumber": 0,
@@ -201,49 +201,6 @@
         },
         "configuration": {
           "aggregates": []
-        }
-      },
-      {
-        "type": "python",
-        "enabled": true,
-        "computeOnBuildMode": "NO",
-        "meta": {
-          "name": "Python probe",
-          "level": 8
-        },
-        "configuration": {
-          "code": "# Define here a function that returns the metric.\ndef process(dataset, partition_id):\n    df\u003ddataset.get_dataframe()\n    df[\u0027\u0027]\n    # dataset is a dataiku.Dataset object\n    return {\u0027metric_name1\u0027 : 42, \u0027metric_name2\u0027 : True}\n",
-          "envSelection": {
-            "envMode": "INHERIT"
-          }
-        }
-      },
-      {
-        "type": "cell",
-        "enabled": false,
-        "computeOnBuildMode": "NO",
-        "meta": {
-          "name": "Cell value",
-          "level": 9
-        },
-        "configuration": {
-          "mode": "SINGLE_CELL_STRICT",
-          "filter": {
-            "distinct": false,
-            "enabled": true,
-            "uiData": {
-              "mode": "\u0026\u0026",
-              "conditions": [
-                {
-                  "input": "date",
-                  "operator": "\u003e\u003d [date]",
-                  "col": "days_till_bloom",
-                  "num": 0.0
-                }
-              ]
-            }
-          },
-          "columns": []
         }
       },
       {
