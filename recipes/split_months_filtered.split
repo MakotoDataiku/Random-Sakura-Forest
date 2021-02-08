@@ -93,8 +93,8 @@
           "conditions": [
             {
               "input": "year",
-              "col": "year",
-              "num": 2013,
+              "col": "date",
+              "num": 2015,
               "operator": "\u003c\u003d [number]"
             }
           ]
