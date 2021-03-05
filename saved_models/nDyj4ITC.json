@@ -3,7 +3,7 @@
   "rebuildBehavior": "EXPLICIT",
   "name": "Prediction (RANDOM_FOREST_REGRESSION) on history",
   "contentType": "prediction/py_memory",
-  "activeVersion": "1614301231057",
+  "activeVersion": "1614906075170",
   "conditionalOutputs": [],
   "partitioning": {
     "ignoreNonMatchingFile": false,
@@ -448,11 +448,11 @@
         },
         "loss": {
           "values": {
-            "deviance": {
-              "enabled": true
-            },
             "exponential": {
               "enabled": false
+            },
+            "deviance": {
+              "enabled": true
             }
           }
         },
@@ -560,10 +560,10 @@
         },
         "loss": {
           "values": {
-            "huber": {
+            "lad": {
               "enabled": false
             },
-            "lad": {
+            "huber": {
               "enabled": false
             },
             "ls": {
@@ -608,21 +608,21 @@
         },
         "criterion": {
           "values": {
-            "entropy": {
-              "enabled": false
-            },
             "gini": {
               "enabled": true
+            },
+            "entropy": {
+              "enabled": false
             }
           }
         },
         "splitter": {
           "values": {
-            "best": {
-              "enabled": true
-            },
             "random": {
               "enabled": false
+            },
+            "best": {
+              "enabled": true
             }
           }
         },
@@ -663,21 +663,21 @@
         },
         "criterion": {
           "values": {
-            "entropy": {
-              "enabled": false
-            },
             "gini": {
               "enabled": true
+            },
+            "entropy": {
+              "enabled": false
             }
           }
         },
         "splitter": {
           "values": {
-            "best": {
-              "enabled": true
-            },
             "random": {
               "enabled": false
+            },
+            "best": {
+              "enabled": true
             }
           }
         },
@@ -763,11 +763,11 @@
             "elasticnet": {
               "enabled": false
             },
-            "l1": {
-              "enabled": true
-            },
             "l2": {
               "enabled": false
+            },
+            "l1": {
+              "enabled": true
             }
           }
         },
@@ -798,11 +798,11 @@
       "sgd_classifier": {
         "loss": {
           "values": {
-            "log": {
-              "enabled": true
-            },
             "modified_huber": {
               "enabled": false
+            },
+            "log": {
+              "enabled": true
             }
           }
         },
@@ -811,11 +811,11 @@
             "elasticnet": {
               "enabled": false
             },
-            "l1": {
-              "enabled": true
-            },
             "l2": {
               "enabled": false
+            },
+            "l1": {
+              "enabled": true
             }
           }
         },
@@ -870,11 +870,11 @@
         "multi_class": "ovr",
         "penalty": {
           "values": {
-            "l1": {
-              "enabled": false
-            },
             "l2": {
               "enabled": true
+            },
+            "l1": {
+              "enabled": false
             }
           }
         },
@@ -961,11 +961,11 @@
             "auto": {
               "enabled": false
             },
-            "custom": {
-              "enabled": false
-            },
             "scale": {
               "enabled": true
+            },
+            "custom": {
+              "enabled": false
             }
           }
         },
@@ -987,14 +987,14 @@
         },
         "kernel": {
           "values": {
+            "rbf": {
+              "enabled": true
+            },
             "linear": {
               "enabled": false
             },
             "poly": {
               "enabled": false
-            },
-            "rbf": {
-              "enabled": true
             },
             "sigmoid": {
               "enabled": false
@@ -1028,11 +1028,11 @@
             "auto": {
               "enabled": false
             },
-            "custom": {
-              "enabled": false
-            },
             "scale": {
               "enabled": true
+            },
+            "custom": {
+              "enabled": false
             }
           }
         },
@@ -1054,14 +1054,14 @@
         },
         "kernel": {
           "values": {
+            "rbf": {
+              "enabled": true
+            },
             "linear": {
               "enabled": false
             },
             "poly": {
               "enabled": false
-            },
-            "rbf": {
-              "enabled": true
             },
             "sigmoid": {
               "enabled": false
@@ -1247,29 +1247,29 @@
         },
         "booster": {
           "values": {
-            "dart": {
-              "enabled": false
-            },
             "gbtree": {
               "enabled": true
+            },
+            "dart": {
+              "enabled": false
             }
           }
         },
         "objective": {
           "values": {
-            "binary_logistic": {
-              "enabled": false
+            "reg_linear": {
+              "enabled": true
             },
-            "multi_softprob": {
+            "reg_logistic": {
               "enabled": false
             },
             "reg_gamma": {
               "enabled": false
             },
-            "reg_linear": {
-              "enabled": true
+            "multi_softprob": {
+              "enabled": false
             },
-            "reg_logistic": {
+            "binary_logistic": {
               "enabled": false
             }
           }
@@ -1638,7 +1638,9 @@
         "nIter": 0,
         "nIterRandom": 10,
         "timeout": 0,
-        "nJobs": 4
+        "nJobs": 4,
+        "distributed": false,
+        "nContainers": 4
       },
       "metrics": {
         "evaluationMetric": "R2",
@@ -1654,6 +1656,42 @@
       },
       "custom_mllib": [],
       "max_ensemble_nodes_serialized": 6000
+    },
+    "assertionsParams": {
+      "assertions": []
+    },
+    "diagnosticsSettings": {
+      "enabled": true,
+      "settings": [
+        {
+          "type": "ML_DIAGNOSTICS_DATASET_SANITY_CHECKS",
+          "enabled": true
+        },
+        {
+          "type": "ML_DIAGNOSTICS_MODELING_PARAMETERS",
+          "enabled": true
+        },
+        {
+          "type": "ML_DIAGNOSTICS_RUNTIME",
+          "enabled": true
+        },
+        {
+          "type": "ML_DIAGNOSTICS_TRAINING_OVERFIT",
+          "enabled": true
+        },
+        {
+          "type": "ML_DIAGNOSTICS_LEAKAGE_DETECTION",
+          "enabled": true
+        },
+        {
+          "type": "ML_DIAGNOSTICS_MODEL_CHECK",
+          "enabled": true
+        },
+        {
+          "type": "ML_DIAGNOSTICS_ML_ASSERTIONS",
+          "enabled": true
+        }
+      ]
     },
     "taskType": "PREDICTION",
     "backendType": "PY_MEMORY",
@@ -1745,14 +1783,15 @@
         "withinFirstN": -1,
         "maxReadUncompressedBytes": -1
       }
-    }
+    },
+    "labels": []
   },
   "versionTag": {
-    "versionNumber": 17,
+    "versionNumber": 18,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1614301397933
+    "lastModifiedOn": 1614906227345
   },
   "creationTag": {
     "versionNumber": 0,
